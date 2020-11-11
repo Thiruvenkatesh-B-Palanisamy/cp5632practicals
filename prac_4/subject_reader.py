@@ -25,7 +25,7 @@ def get_data():
 
 def display_subjects(data):
     for subject_data in data:
-        print("{} is taught by {} and has {} students".format(subject_data[0], subject_data[1], subject_data[2]))
+        print("{} is taught by {:12} and has {:3} students".format(subject_data[0], subject_data[1], subject_data[2]))
 
 
 main()
