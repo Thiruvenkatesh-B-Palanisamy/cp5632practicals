@@ -17,7 +17,14 @@ def main():
         if menu_choice == "c":
             print("Taxis available: ")
             display_taxis(taxis)
-            taxi_choice = int(input("Choose taxi: "))
+            finished = False
+            while finished is False:
+                try:
+                    taxi_choice = int(input("Choose taxi: "))
+                    finished = True
+                except ValueError:
+                    print("please enter number")
+                    finished = False
             current_taxi = taxis[taxi_choice]
         elif menu_choice == "d":
             current_taxi.start_fare()
